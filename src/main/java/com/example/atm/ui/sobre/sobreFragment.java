@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import com.example.atm.R;
 
 import mehdi.sakout.aboutpage.AboutPage;
+import mehdi.sakout.aboutpage.Element;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -32,6 +33,9 @@ public class sobreFragment extends Fragment {
                             "que desejam alcançar através da excelência em gestão e " +
                              "da busca pela qualidade";
 
+        Element versao = new Element();
+        versao.setTitle("versão 1.4");
+
     return new AboutPage(getActivity(  ))
                 .setImage( R.drawable.logo )
                 .setDescription( descricao )
@@ -42,6 +46,7 @@ public class sobreFragment extends Fragment {
                 .addFacebook("Leo Sousa","facebook")
                 .addInstagram("Leozin","instagram")
                 .addGitHub("https://github.com/medyo/android-about-page","github")
+                .addItem( versao )
                 .create();
     }
 }
